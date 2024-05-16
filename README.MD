@@ -4,14 +4,11 @@ This repository contains resources (code snapshots, extra files & slides) for my
 
 ## How To Use
 
-This repository contains the course slides and a top-level `Course Sections` folder.
+This repository contains the course slides and top-level [code-snapshots](/code-snapshots/) and [attachments](/attachments/) folders.
 
-Inside that folder you find multiple subfolders - **one for each course section**. For example, the folder `Course Sections/01 Getting Started` contains all attachments that belong to the first course section (the "Getting Started" course section).
+The [code-snapshots](/code-snapshots/) folder contains multiple code snapshots per course section - these snapshots should help you with debugging you course projects when following along with the course code.
 
-Inside these course section folders you typically find one or two subfolder(s):
-
-- `Code Snapshots`: This folders contains complete Angular project snapshots (for usage, [see below](#using-code-snapshots))
-- `Code Files`: Standalone code files that might be mentioned in some course lectures (e.g., CSS files used in a lecture)
+The [attachments](/attachments/) folder contains lecture-specific attachments which I reference in some of the course lectures.
 
 ## Using Code Snapshots
 
@@ -27,7 +24,7 @@ You can also download the entire repository to your machine via the green "Code"
 
 As mentioned, the code snapshots provided in this repository are complete Angular projects. Their main purpose is to allow you to compare your code to mine (see [above](#using-code-snapshots)).
 
-But, once you downloaded them, you can also run the code snapshots on your machine. To do this, you must perform the following steps:
+But once you downloaded them you can also run the code snapshots on your machine. To do this, you must perform the following steps:
 
 ### 1) Install dependencies
 
@@ -46,13 +43,11 @@ npm install
 As a next step, you can start the development server via
 
 ```shell
-ng serve
+npm start
 ```
 
-## Using Code Files
+or 
 
-Some lectures also require some extra code files to be added to your Angular projects - for example you might need to add some CSS files (since this is not a CSS course, I do provide such files to you).
-
-If a lecture needs extra code files, it's clearly mentioned in that lecture and a link to the required file is provided as part of the lecture.
-
-That extra file could also be a **starting project** (provided as a ZIP file) that needs to be downloaded. If that's the case, you must not forget to run `npm install` inside the extracted folder before following along (also see ["Running the Code Snapshots"](#running-the-code-snapshots) - the steps are the same).
+```shell
+ng serve
+```
