@@ -2,7 +2,7 @@
   padding: 1rem;
   border-radius: 8px;
   max-height: 60vh;
-  overflow: scroll;
+  overflow: auto;
   background-color: #3a2c54;
 }
 
@@ -49,7 +49,7 @@ ul {
   flex-direction: column;
   gap: 1rem;
   max-height: 50vh;
-  overflow: scroll;
+  overflow: auto;
 }
 
 @media (min-width: 768px) {

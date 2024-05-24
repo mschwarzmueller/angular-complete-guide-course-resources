@@ -13,7 +13,7 @@ main {
   padding: 0;
   display: flex;
   gap: 0.5rem;
-  overflow: scroll;
+  overflow: auto;
 }
 
 #fallback {
