@@ -1,0 +1,67 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #132429;
+  color: #b8def9;
+}
+
+main {
+  display: flex;
+  gap: 5rem;
+  margin: 3rem auto;
+  max-width: 55rem;
+}
+
+.temperatures {
+  padding: 2rem;
+  border-radius: 4px;
+  background: linear-gradient(#505a5d, #717678);
+  font-size: 1.25rem;
+  box-shadow: 0 0 8px rgba(25, 25, 24, 0.7)
+}
+
+.temperatures header {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.temperatures img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.temperatures h2 {
+  text-align: left;
+  font-size: 1rem;
+  color: #ffffff;
+  margin: 0;
+}
+
+.temperatures header p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.temperatures ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.temperatures li {
+  margin: 0.5rem;
+}

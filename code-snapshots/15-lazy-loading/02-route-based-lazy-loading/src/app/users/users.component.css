@@ -1,0 +1,14 @@
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+  overflow: scroll;
+}
+
+@media (min-width: 768px) {
+  ul {
+    flex-direction: column;
+  }
+}

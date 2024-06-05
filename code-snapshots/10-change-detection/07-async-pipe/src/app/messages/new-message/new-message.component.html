@@ -1,0 +1,11 @@
+<form (ngSubmit)="onSubmit()">
+  <p>
+    <label for="message">Your Message</label>
+    <textarea id="message" name="message" [(ngModel)]="enteredText"></textarea>
+  </p>
+  <p class="actions">
+    <button>Save</button>
+  </p>
+</form>
+
+<p class="debug-output">{{ debugOutput }}</p>

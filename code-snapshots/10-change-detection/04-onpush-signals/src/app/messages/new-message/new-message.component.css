@@ -1,0 +1,40 @@
+:host {
+  display: block;
+  max-width: 25rem;
+  margin: 3rem auto;
+  padding: 1rem;
+  background-color: #2a262d;
+  border: 2px solid #a73cf8;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+textarea {
+  width: 100%;
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #a73cf8;
+  background-color: #544e5a;
+  color: #ffffff;
+}
+
+.actions {
+  text-align: right;
+  margin: 0;
+}
+
+button {
+  font: inherit;
+  background-color: #a73cf8;
+  color: #ffffff;
+  border: none;
+  padding: 0.25rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}

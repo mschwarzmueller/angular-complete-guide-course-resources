@@ -1,0 +1,19 @@
+:host {
+  display: block;
+  max-width: 50rem;
+  margin: 2rem auto;
+  padding: 0 1rem 1rem 1rem;
+  border: 2px solid #dad6dd;
+  color: #dad6dd;
+  text-align: center;
+  border-radius: 4px;
+}
+
+h2 {
+  margin-top: 0;
+  padding: 1rem 2rem;
+  background-color: #dad6dd;
+  color: #212022;
+  display: inline-block;
+  border-radius: 0 0 4px 4px;
+}

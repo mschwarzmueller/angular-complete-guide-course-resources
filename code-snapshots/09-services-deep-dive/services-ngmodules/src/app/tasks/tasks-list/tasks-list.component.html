@@ -1,0 +1,19 @@
+<header>
+  <h2>My Tasks</h2>
+  <p>
+    <select (change)="onChangeTasksFilter(filter.value)" #filter>
+      <option value="all">All</option>
+      @for (option of taskStatusOptions; track option.value) {
+        <option [value]="option.value">{{ option.text }}</option>
+      }
+    </select>
+  </p>
+</header>
+
+<ul>
+  @for (task of tasks(); track task.id) {
+    <li>
+      <app-task-item [task]="task" />
+    </li>
+  }
+</ul>

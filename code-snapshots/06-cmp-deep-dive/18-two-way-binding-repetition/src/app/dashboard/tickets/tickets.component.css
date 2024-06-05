@@ -1,0 +1,33 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+:host ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 15rem;
+}
+
+:host li {
+  margin: 0.5rem 0;
+}
+
+:host p {
+  margin: 0;
+  color: #4f4b53;
+}
+
+:host h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #38343c;
+}
+
+@media (min-width: 768px) {
+  :host {
+    flex-direction: row;
+  }
+}

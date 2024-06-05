@@ -1,0 +1,68 @@
+article {
+  max-width: 50rem;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: #f3d5f9;
+  color: #322f32;
+  display: flex;
+  justify-content: space-between;
+}
+
+h2 {
+  margin: 0;
+}
+
+p {
+  margin: 0.25rem 0;
+}
+
+.offer-progress p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #666166;
+}
+
+progress {
+  width: 100%;
+  height: 1rem;
+  margin: 0;
+  border-radius: 4px;
+  background: #e5c2eb;
+  color: #f20d61;
+  border: 1px solid #e5c2eb;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #e5c2eb;
+}
+
+progress::-webkit-progress-value {
+  background-color: #f20d61;
+}
+
+a {
+  font-size: 1.25rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f20d61;
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border-radius: 4px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover,
+a:focus {
+  background-color: #6b069d;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+.expired {
+  flex: 1;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #8d868e;
+}

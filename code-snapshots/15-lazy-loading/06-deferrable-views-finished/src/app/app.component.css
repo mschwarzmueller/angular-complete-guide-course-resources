@@ -1,0 +1,25 @@
+header {
+  margin: 3rem auto;
+  text-align: center;
+}
+
+header img {
+  width: 8.5rem;
+  height: 8.5rem;
+  filter: drop-shadow(0 0 8px #b018a1);
+}
+
+header h1 {
+  font-family: "Rubik", sans-serif;
+  font-size: 3rem;
+  margin-bottom: 0.25rem;
+  background: linear-gradient(90deg, #f902e1, #6600ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header p {
+  margin: 0;
+  color: #ccaff7;
+  font-size: 1.25rem;
+}

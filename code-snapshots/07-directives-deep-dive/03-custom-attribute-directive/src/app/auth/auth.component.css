@@ -1,0 +1,47 @@
+form {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-end;
+}
+
+p {
+  flex: 1;
+}
+
+p:has(button) {
+  flex: 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.15rem;
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: #1e2330;
+}
+
+input {
+  font: inherit;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #606980;
+  width: 100%;
+  background-color: #606980;
+  color: white;
+}
+
+button {
+  font: inherit;
+  padding: 0.35rem 1.5rem;
+  border-radius: 4px;
+  border: none;
+  background-color: #264ec5;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #763ab7;
+  box-shadow: 0 0 0.5rem #763ab7;
+}

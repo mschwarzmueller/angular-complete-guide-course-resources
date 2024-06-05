@@ -1,0 +1,17 @@
+<article>
+  @if (!offerExpired()) {
+    <div>
+      <h2>Special Offer!</h2>
+      <p>Act quick and save your spot for just $99.99!</p>
+      <div class="offer-progress">
+        <progress [value]="timer | async" max="100"></progress>
+        <p>Offer expires in {{ remainingTime | async }}s</p>
+      </div>
+    </div>
+    <p>
+      <a>View Offer</a>
+    </p>
+  } @else {
+    <p class="expired">Unfortunately, the offer expired!</p>
+  }
+</article>

@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@400;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle at top left, #2c0628, #0b0519);
+  color: #f3e4ef;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10rem;
+}
+
+.fallback {
+  text-align: center;
+  color: #c1b3bf;
+}

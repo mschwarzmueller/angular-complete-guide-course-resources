@@ -1,0 +1,61 @@
+ul {
+  max-width: 80rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  grid-gap: 2rem;
+  margin: 2rem auto;
+  padding: 0;
+  list-style: none;
+}
+
+.place-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  background: #1f1c2c;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  animation: slide-up-fade-in 0.3s ease-out forwards;
+}
+
+.place-item button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.place-item:nth-child(odd) button:hover,
+.place-item:nth-child(odd) button:focus {
+  box-shadow: 0 0 8px 4px rgba(255, 217, 0, 0.6);
+  border-radius: 8px;
+  transform: rotate(5deg);
+}
+
+.place-item:nth-child(even) button:hover,
+.place-item:nth-child(even) button:focus {
+  box-shadow: 0 0 8px 4px rgba(255, 217, 0, 0.6);
+  border-radius: 8px;
+  transform: rotate(-5deg);
+}
+
+.place-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.place-item h3 {
+  font-family: "Raleway", sans-serif;
+  font-weight: normal;
+  font-size: 0.9rem;
+  position: absolute;
+  bottom: 0;
+  right: 1rem;
+  margin: 1rem auto;
+  background-color: #feee86;
+  border-radius: 4px;
+  padding: 0.15rem 0.35rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}

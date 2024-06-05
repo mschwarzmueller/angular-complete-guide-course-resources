@@ -1,0 +1,19 @@
+:host {
+  display: block;
+  max-width: 25rem;
+  margin: 3rem auto;
+  padding: 1rem;
+  background-color: #232826;
+  border: 2px solid #3cf8a7;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+ul li {
+  margin: 0.5rem 0;
+}

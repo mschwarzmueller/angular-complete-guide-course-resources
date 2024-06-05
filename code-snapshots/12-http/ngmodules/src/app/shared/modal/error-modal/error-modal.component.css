@@ -1,0 +1,31 @@
+.error {
+  max-width: 40rem;
+  margin: auto;
+  padding: 1rem;
+  background-color: #f4c7c7;
+  color: #3e0505;
+}
+
+.confirmation-actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+button {
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #5d0909;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+button:hover,
+button:focus {
+  background-color: #3e0505;
+}

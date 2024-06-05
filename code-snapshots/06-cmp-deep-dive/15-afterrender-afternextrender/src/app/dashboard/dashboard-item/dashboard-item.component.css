@@ -1,0 +1,35 @@
+:host {
+  display: block;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f8f8f8;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+:host header {
+  display: flex;
+  padding: 0;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+:host header img {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
+}
+
+h2 {
+  margin: 0;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: #504e50;
+}
+
+@media (min-width: 768px) {
+  :host {
+    padding: 2rem;
+  }
+}

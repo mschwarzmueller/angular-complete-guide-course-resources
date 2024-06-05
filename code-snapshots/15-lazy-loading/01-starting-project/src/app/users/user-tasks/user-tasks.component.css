@@ -1,0 +1,54 @@
+#tasks {
+  padding: 1rem;
+  border-radius: 8px;
+  max-height: 60vh;
+  overflow: scroll;
+  background-color: #3a2c54;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+h2 {
+  margin: 0;
+  font-size: 0.9rem;
+  width: 60%;
+  text-wrap: balance;
+}
+
+menu {
+  margin: 0;
+  padding: 0;
+}
+
+menu a {
+  font: inherit;
+  cursor: pointer;
+  color: #181223;
+  background-color: #9965dd;
+  border-radius: 4px;
+  border: none;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+menu a:hover,
+menu a:active {
+  background-color: #a565dd
+}
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  menu {
+    width: auto;
+  }
+}

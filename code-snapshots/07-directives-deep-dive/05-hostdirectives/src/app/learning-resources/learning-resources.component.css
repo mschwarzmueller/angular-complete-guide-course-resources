@@ -1,0 +1,32 @@
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  color: #2e323b;
+}
+
+ul {
+  margin: 1rem 0 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+}
+
+ul li a {
+  text-decoration: none;
+  color: rgb(207, 228, 245);
+  background-color: #264ec5;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+ul li a:hover {
+  background-color: #763ab7;
+  box-shadow: 0 0 0.5rem #763ab7;
+}

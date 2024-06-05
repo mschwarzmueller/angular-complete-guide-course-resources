@@ -1,0 +1,32 @@
+:host {
+  max-width: 30rem;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #3a3831;
+  display: block;
+  border: 2px solid #ffc800;
+  text-align: center;
+}
+
+p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  font: inherit;
+  background-color: #ffc800;
+  color: #3a3831;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+span {
+  font-size: 3rem;
+  color: #e5cc71;
+  margin: 0 2rem;
+}

@@ -1,0 +1,149 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <h2>Welcome on board!</h2>
+  <p>We just need a little bit of data from you to get you started 🚀</p>
+
+  <div class="control">
+    <label for="email">Email</label>
+    <input id="email" type="email" name="email" formControlName="email" />
+  </div>
+
+  <div class="control-row" formGroupName="passwords">
+    <div class="control">
+      <label for="password">Password</label>
+      <input
+        id="password"
+        type="password"
+        name="password"
+        formControlName="password"
+      />
+    </div>
+
+    <div class="control">
+      <label for="confirm-password">Confirm Password</label>
+      <input
+        id="confirm-password"
+        type="password"
+        name="confirm-password"
+        formControlName="confirmPassword"
+      />
+    </div>
+  </div>
+
+  <hr />
+
+  <div>
+    <div class="control-row">
+      <div class="control">
+        <label for="first-name">First Name</label>
+        <input
+          type="text"
+          id="first-name"
+          name="first-name"
+          formControlName="firstName"
+        />
+      </div>
+
+      <div class="control">
+        <label for="last-name">Last Name</label>
+        <input
+          type="text"
+          id="last-name"
+          name="last-name"
+          formControlName="lastName"
+        />
+      </div>
+    </div>
+
+    <fieldset formGroupName="address">
+      <legend>Your Address</legend>
+
+      <div class="control-row">
+        <div class="control">
+          <label for="street">Street</label>
+          <input
+            type="text"
+            id="street"
+            name="street"
+            formControlName="street"
+          />
+        </div>
+
+        <div class="control">
+          <label for="number">Number</label>
+          <input
+            type="text"
+            id="number"
+            name="number"
+            formControlName="number"
+          />
+        </div>
+      </div>
+
+      <div class="control-row">
+        <div class="control">
+          <label for="postal-code">Postal Code</label>
+          <input
+            type="text"
+            id="postal-code"
+            name="postal-code"
+            formControlName="postalCode"
+          />
+        </div>
+
+        <div class="control">
+          <label for="city">City</label>
+          <input type="text" id="city" name="city" formControlName="city" />
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  <hr />
+
+  <div class="control-row">
+    <div class="control">
+      <label for="role">What best describes your role?</label>
+      <select id="role" name="role" formControlName="role">
+        <option value="student">Student</option>
+        <option value="teacher">Teacher</option>
+        <option value="employee">Employee</option>
+        <option value="founder">Founder</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+  </div>
+
+  <fieldset formArrayName="source">
+    <legend>How did you find us?</legend>
+    <div class="control">
+      <input type="checkbox" id="google" name="acquisition" value="google" formControlName="0" />
+      <label for="google">Google</label>
+    </div>
+
+    <div class="control">
+      <input type="checkbox" id="friend" name="acquisition" value="friend" formControlName="1" />
+      <label for="friend">Referred by friend</label>
+    </div>
+
+    <div class="control">
+      <input type="checkbox" id="other" name="acquisition" value="other" formControlName="2" />
+      <label for="other">Other</label>
+    </div>
+  </fieldset>
+
+  <div class="control-row">
+    <div class="control">
+      <input type="checkbox" id="terms-and-conditions" name="terms" formControlName="agree" />
+      <label for="terms-and-conditions">
+        I agree to the terms and conditions
+      </label>
+    </div>
+  </div>
+
+  <p class="form-actions">
+    <button type="button" class="button button-flat" (click)="onReset()">
+      Reset
+    </button>
+    <button type="submit" class="button">Sign up</button>
+  </p>
+</form>

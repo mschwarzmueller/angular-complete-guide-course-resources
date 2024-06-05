@@ -1,0 +1,147 @@
+<form>
+  <h2>Welcome on board!</h2>
+  <p>We just need a little bit of data from you to get you started 🚀</p>
+
+  <div class="control">
+    <label for="email">Email</label>
+    <input id="email" type="email" name="email" />
+  </div>
+
+  <div class="control-row">
+    <div class="control">
+      <label for="password">Password</label>
+      <input
+        id="password"
+        type="password"
+        name="password"
+      />
+    </div>
+
+    <div class="control">
+      <label for="confirm-password">Confirm Password</label>
+      <input
+        id="confirm-password"
+        type="password"
+        name="confirm-password"
+      />
+    </div>
+  </div>
+
+  <hr />
+
+  <div>
+    <div class="control-row">
+      <div class="control">
+        <label for="first-name">First Name</label>
+        <input
+          type="text"
+          id="first-name"
+          name="first-name"
+        />
+      </div>
+
+      <div class="control">
+        <label for="last-name">Last Name</label>
+        <input
+          type="text"
+          id="last-name"
+          name="last-name"
+        />
+      </div>
+    </div>
+
+    <fieldset>
+      <legend>Your Address</legend>
+
+      <div class="control-row">
+        <div class="control">
+          <label for="street">Street</label>
+          <input type="text" id="street" name="street" />
+        </div>
+
+        <div class="control">
+          <label for="number">Number</label>
+          <input type="text" id="number" name="number" />
+        </div>
+      </div>
+
+      <div class="control-row">
+        <div class="control">
+          <label for="postal-code">Postal Code</label>
+          <input type="text" id="postal-code" name="postal-code" />
+        </div>
+
+        <div class="control">
+          <label for="city">City</label>
+          <input type="text" id="city" name="city" />
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  <hr />
+
+  <div class="control-row">
+    <div class="control">
+      <label for="role">What best describes your role?</label>
+      <select id="role" name="role">
+        <option value="student">Student</option>
+        <option value="teacher">Teacher</option>
+        <option value="employee">Employee</option>
+        <option value="founder">Founder</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+  </div>
+
+  <fieldset>
+    <legend>How did you find us?</legend>
+    <div class="control">
+      <input
+        type="checkbox"
+        id="google"
+        name="acquisition"
+        value="google"
+      />
+      <label for="google">Google</label>
+    </div>
+
+    <div class="control">
+      <input
+        type="checkbox"
+        id="friend"
+        name="acquisition"
+        value="friend"
+      />
+      <label for="friend">Referred by friend</label>
+    </div>
+
+    <div class="control">
+      <input
+        type="checkbox"
+        id="other"
+        name="acquisition"
+        value="other"
+      />
+      <label for="other">Other</label>
+    </div>
+  </fieldset>
+
+  <div class="control-row">
+    <div class="control">
+      <label for="terms-and-conditions">
+        <input
+          type="checkbox"
+          id="terms-and-conditions"
+          name="terms"
+        />
+        I agree to the terms and conditions
+      </label>
+    </div>
+  </div>
+
+  <p class="form-actions">
+    <button type="reset" class="button button-flat">Reset</button>
+    <button type="submit" class="button">Sign up</button>
+  </p>
+</form>

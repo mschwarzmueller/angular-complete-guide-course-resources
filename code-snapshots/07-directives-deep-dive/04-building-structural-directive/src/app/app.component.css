@@ -1,0 +1,32 @@
+main {
+  margin: 3rem auto;
+  width: 90%;
+  max-width: 50rem;
+  padding: 1rem;
+  background-color: #a2afc2;
+  border-radius: 4px;
+}
+
+hr {
+  margin: 2rem 0;
+  border: 1px solid #686c77;
+}
+
+.protected-content {
+  background-color: #6a0931;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 4px;
+}
+
+#protected-content p {
+  margin: 0;
+}
+
+.authenticated {
+  background-color: #3a096a;
+}
+
+.admin {
+  background-color: #1354be;
+}

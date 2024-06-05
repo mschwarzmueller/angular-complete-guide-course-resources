@@ -1,0 +1,40 @@
+:host {
+  display: block;
+  margin: 2rem auto;
+  max-width: 40rem;
+  border-radius: 4px;
+  background-color: #44433f;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+h2 {
+  margin: 0;
+  color: #d2ccb2;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+select {
+  font: inherit;
+  padding: 0.5rem;
+  border: none;
+  background-color: #262521;
+  color: #feeaa6;
+  border-radius: 0.25rem;
+  font-size: 0.9rem;
+}
+
+ul {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem;
+}
