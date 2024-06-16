@@ -1,0 +1,12 @@
+<div id="buttons">
+  <button (click)="onToggleLifecycleComponentVisibility()">
+    Toggle Lifecycle Component Visibility
+  </button>
+  <button (click)="onChangeLifecycleInputText()">
+    Change Lifecycle Component Text
+  </button>
+</div>
+
+@if (lifecycleComponentIsVisible) {
+  <app-lifecycle [text]="lifecycleInputText" />
+}
