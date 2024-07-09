@@ -2,7 +2,7 @@
   padding: 1rem;
   border-radius: 8px;
   max-height: 60vh;
-  overflow: scroll;
+  overflow: auto;
   background-color: #3a2c54;
 }
 

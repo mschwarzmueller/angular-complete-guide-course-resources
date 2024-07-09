@@ -6,5 +6,5 @@ ul {
   flex-direction: column;
   gap: 1rem;
   max-height: 50vh;
-  overflow: scroll;
+  overflow: auto;
 }
