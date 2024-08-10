@@ -1,17 +1,34 @@
+
+<!-- kemi header -->
 <app-header />
 
+
 <main>
+  <!-- list users -->
   <ul id="users">
     @for (user of users; track user.id) {
       <li>
+        <!-- [user]="user" -> Me ndimen e @Input ndergojme user_array ne app-user -->
+
+        <!-- [selected]="user.id === selectedUserId" -> if user.id === selectedUserId qe vjen nga 
+         @Output select ose nga nje nga list qe shtyp user eshte e barrabart return true else false,
+         nese eshte false keyword ne user_html [class.active]="selected" nuk aktivizohet -->
+
+         <!-- (select)="onSelectUser($event)" -> marim user_id_string me @Output nga app-user, kur user shtyp nje nga listat -->
         <app-user [user]="user" [selected]="user.id === selectedUserId" (select)="onSelectUser($event)" />
       </li>
     }
   </ul>
 
+  <!-- task for each user -->
+  <!-- marim object user nga getter method 'selectedUser' e cila edhe ajo eshte nje vler undefiend 
+       ne vetevete edhe pse kryen nje funksjon, prandaj @if na mundeson qe vlerat user dhe name mos 
+      te jet ' [userId]="selectedUser!.id" [name]="selectedUser!.name" ', pra me '!'. -->
   @if (selectedUser) {
     <app-tasks [userId]="selectedUser.id" [name]="selectedUser.name" />
   } @else {
     <p id="fallback">Select a user to see their tasks!</p>
   }
+
 </main>
+ 
