@@ -12,7 +12,10 @@ import { UserInputModule } from './user-input/user-input.module';
     HeaderComponent,
     InvestmentResultsComponent,
   ],
-  imports: [BrowserModule, UserInputModule],
+  imports: [
+    BrowserModule, 
+    UserInputModule], // krijojme nje userInputModule sepse kemi FormsModule te cilen duam te bashkagjisim brenda user-input folder dhe jo jasht
   bootstrap: [AppComponent]
 })
 export class AppModule {}
+ 
