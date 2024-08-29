@@ -10,7 +10,7 @@ import { DashboardItemComponent } from './dashboard/dashboard-item/dashboard-ite
   selector: 'app-root',
   standalone: true,
   imports: [
-    HeaderComponent,
+    HeaderComponent, // komponenti header eshte standalone: true, mjafton vetem ta inportosh, por edhe nese do kishim @NgModule dhe komponenti do ishte standalone: true, thjesht na duhesh ta inportonim.
     ServerStatusComponent,
     TrafficComponent,
     TicketsComponent,
@@ -19,3 +19,4 @@ import { DashboardItemComponent } from './dashboard/dashboard-item/dashboard-ite
   templateUrl: './app.component.html',
 })
 export class AppComponent {}
+ 

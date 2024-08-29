@@ -5,14 +5,25 @@
     'status-offline': currentStatus() === 'offline',
     'status-unknown': currentStatus() === 'unknown'
   }" >
+
+  <!-- status-online , status-offline dhe status-unknown jan klasa ne css, ku ndryshojme gjyrat sipas kushtin random 
+       qe na vjen nga ts, e njetja gje eshte edhe me @if, @else if, @else -->
+
   @if (currentStatus() === 'online') {
+
   <p>Servers are online</p>
   <p>All systems are operational.</p>
+
   } @else if (currentStatus() === 'offline') {
+
   <p>Servers are offline</p>
   <p>Functionality should be restored soon.</p>
+
   } @else {
+
   <p>Server status is unknown</p>
   <p>Fetching server status failed.</p>
+
   }
 </div>
+ 
