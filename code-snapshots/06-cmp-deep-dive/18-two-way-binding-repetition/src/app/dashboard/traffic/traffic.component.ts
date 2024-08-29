@@ -20,7 +20,7 @@ export class TrafficComponent {
     {
       id: 'd3',
       value: 290,
-    },
+    }, 
     {
       id: 'd4',
       value: 410,
@@ -38,5 +38,8 @@ export class TrafficComponent {
       value: 589,
     },
   ];
+
+  // nga dummyTrafficData gjejme objektin qe vleren me te madhe, ne kete raste vlera me e madhe eshte  589
   maxTraffic = Math.max(...this.dummyTrafficData.map((data) => data.value));
+  
 }

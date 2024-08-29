@@ -1,7 +1,9 @@
 <p>Last 7 days</p>
 
 <div id="chart">
-  @for (dataPoint of dummyTrafficData; track dataPoint.id) {
+  @for (dataPoint of dummyTrafficData; track dataPoint.id) { <!-- track dataPoint.id -> perdoret per te indentifikur te dhenat - reshtat ne baz te id -->
+  <!-- In Angular, <div [style.height]> is a way to bind a dynamic value to the height CSS style property of a div element.  -->
   <div [style.height]="(dataPoint.value / maxTraffic) * 100 + '%'"></div>
   }
 </div>
+ 

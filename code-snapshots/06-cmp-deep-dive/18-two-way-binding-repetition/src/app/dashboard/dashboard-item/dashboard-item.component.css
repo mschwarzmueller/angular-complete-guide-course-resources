@@ -1,4 +1,7 @@
-:host {
+
+/* :host { } -> perfaqeson gjith komponenin ne teresi */
+
+:host { /* The styles inside this block apply to the host element of the DashboardItemComponent. */
   display: block;
   padding: 1rem;
   border: 1px solid #ccc;
@@ -7,6 +10,7 @@
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
 }
 
+/* This targets the header element inside your component, aligning its content (image and title) horizontally using flexbox */
 :host header {
   display: flex;
   padding: 0;
@@ -14,7 +18,7 @@
   align-items: center;
   margin-bottom: 1rem;
 }
-
+ 
 :host header img {
   width: 1.5rem;
   height: 1.5rem;
