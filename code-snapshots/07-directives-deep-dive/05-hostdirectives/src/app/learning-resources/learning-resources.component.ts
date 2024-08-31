@@ -11,3 +11,4 @@ import { LogDirective } from '../log.directive';
   imports: [SafeLinkDirective, LogDirective]
 })
 export class LearningResourcesComponent {}
+ 
