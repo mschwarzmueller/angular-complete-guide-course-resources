@@ -25,3 +25,4 @@ export class AppComponent {
 
   isAdmin = computed(() => this.authService.activePermission() === 'admin');
 }
+                            
