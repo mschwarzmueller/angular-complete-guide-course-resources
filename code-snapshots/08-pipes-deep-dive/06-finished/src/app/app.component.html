@@ -22,9 +22,17 @@
       </div>
     </header>
     <ul>
-      @for (temperature of historicTemperatures; track temperature) {
+
+      <!-- pine inside for loop - beatuful -->
+      
+      <!-- @for (temperature of historicTemperatures | sort :'asc' ; track temperature) {
+        <li (click)="onReset($index)">{{ temperature | temp:'cel' }}</li>
+      } -->
+
+      @for (temperature of historicTemperatures ; track temperature) {
         <li (click)="onReset($index)">{{ temperature | temp:'cel' }}</li>
       }
     </ul>
   </article>
 </main>
+ 
