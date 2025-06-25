@@ -10,11 +10,14 @@ import { ErrorService } from '../../error.service';
     imports: [ModalComponent]
 })
 export class ErrorModalComponent {
+
+  // take data by <app-error-modal title="An error occurred!" [message]="error()" /> in app.component.html
   title = input<string>();
   message = input<string>();
   private errorService = inject(ErrorService);
 
   onClearError() {
-    this.errorService.clearError();
+    this.errorService.clearError(); // cleaning message signal
   }
 }
+ 

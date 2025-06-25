@@ -1,15 +1,29 @@
 <app-places-container title="Your Favorite Places">
+  <!-- Shfaqim loading if boolean true and if not error -->
   @if (isFetching() && !error()) {
     <p class="fallback-text">Fetching favorite places...</p>
   }
 
-  @if (error()) {
-    <p class="fallback-text">{{ error() }}</p>
+  @if (error()) { <!-- if error  -->
+    <p class="fallback-text">{{ error() }}</p> <!-- display dhe message -->
   }
 
-  @if (places()) {
+  @if (places()) { <!-- if data -->
+
+    <!-- *** ketu si e kupton angulari qe komponenti app-places po perdoret ketu ne user-places.component.html 
+             dhe available-places.component.html njekohesisht ??? *** -->
+
+    <!-- Marim te data with output dhe dergojme te dhena me input  -->
     <app-places [places]="places()!" (selectPlace)="onRemovePlace($event)" />
-  } @else if (places().length === 0) {
+
+  } @else if (places().length === 0) { <!-- if not data display the message -->
+   
+    <!-- ??? pse nuk shfaqet kjo ketu kur vlera eshte 0 -->
     <p class="fallback-text">Unfortunately, no places could be found.</p>
+
   }
+
+  <p> just a test {{ places().length }} </p>
+
 </app-places-container>
+ 

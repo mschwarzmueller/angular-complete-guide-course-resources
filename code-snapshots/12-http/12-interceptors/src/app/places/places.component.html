@@ -1,7 +1,8 @@
 <ul>
-  @for (place of places(); track place.id) {
-    <li class="place-item">
-      <button (click)="onSelectPlace(place)">
+  <!-- vlerat nga input: places = input.required<Place[]>(); i bashkagjisim ketu  -->
+  @for (place of places(); track place.id) { <!-- i bejme track place.id qe @for qe ti rendisi te dhenat ne id unike  -->
+    <li class="place-item"> <!-- li -> perfaqeson listat -->
+      <button (click)="onSelectPlace(place)"> <!-- marim objekt per cdo click qe user klikon nje foto dhe e bashkagjisim ne output -->
         <img
           [src]="'http://localhost:3000/' + place.image.src"
           [alt]="place.image.alt"
@@ -11,3 +12,4 @@
     </li>
   }
 </ul>
+ 

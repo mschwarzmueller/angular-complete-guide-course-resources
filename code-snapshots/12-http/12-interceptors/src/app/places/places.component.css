@@ -1,6 +1,17 @@
+/* grid -> dizajnin grafik i referohet një strukture të organizuar në rreshta dhe kolona 
+   që përdoret për të rregulluar elementet vizuale në mënyrë të rregullt dhe simetrike.  */
+
+/* grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));: Kjo përcakton paraqitjen e gridës: */
+/* repeat(auto-fill, ...) automatikisht krijon aq kolona sa mund të përshtaten sipas hapësirës së disponueshme.
+   minmax(18rem, 1fr) do të thotë që çdo kolonë do të ketë një gjerësi minimale prej 18 rem, por mund të zgjerohet 
+   për të mbushur hapësirën e disponueshme (1fr nënkupton një fraksion të hapësirës së disponueshme). 
+   Kjo e bën gridën të përgjegjshme (responsive), duke rregulluar numrin e kolonave sipas gjerësisë së ekranit. */
+
+/* grid-gap: 2rem;: Kjo shton një hapësirë prej 2 rem midis çdo elementi të gridës, si horizontalisht ashtu edhe vertikalisht. */
+
 ul {
-  max-width: 80rem;
-  display: grid;
+  max-width: 80rem; /* gjersia e ul */ 
+  display: grid; /* cdo gje prenda ul e rendisim ne reshta dhe kolona */
   grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
   grid-gap: 2rem;
   margin: 2rem auto;
@@ -9,19 +20,19 @@ ul {
 }
 
 .place-item {
-  position: relative;
-  display: flex;
-  flex-direction: column;
+  position: relative; /* Kjo veti e vendos elementin në pozicion relativ në lidhje me pozicionin e tij normal. Kjo do të thotë që mund të zhvendoset nga pozicioni i tij fillestar duke përdorur veti si top, left, right, ose bottom, pa ndikuar te elementet e tjerë. */
+  display: flex; /*  E bën elementin një kontejner fleksibël (flexbox), që do të thotë se fëmijët e tij do të rreshtohen dhe menaxhohen brenda këtij kontejneri në një paraqitje fleksibël dhe dinamike. */
+  flex-direction: column; /* Kjo e rreshton përmbajtjen brenda kontejnerit fleksibël në formë kolone, që do të thotë se elementet fëmijë do të renditen njëri mbi tjetrin vertikalisht. */
   border-radius: 8px;
   background: #1f1c2c;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  animation: slide-up-fade-in 0.3s ease-out forwards;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Krijon një hije rreth elementit  */
+  animation: slide-up-fade-in 0.3s ease-out forwards; /* Kjo veti krijon një animacion për elementin */
 }
 
 .place-item button {
   background: transparent;
   border: none;
-  padding: 0;
+  padding: 0; 
   transition: all 0.2s ease-in-out;
 }
 

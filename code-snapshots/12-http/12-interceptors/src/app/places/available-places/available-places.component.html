@@ -1,15 +1,30 @@
+
+<!-- vem re se input title eshte pa kllapa '[]' sepse ka nje vler statike, te pa ndryshuar -->
+<!-- kurse input place eshte me kllapa [places]="places()!" sepse eshte duke mar vlera nje array vlerash nga komponenti  -->
 <app-places-container title="Available Places">
-  @if (isFetching() && !error()) {
+  <!-- kjo eshte ne vend te loading, deri sa nuk kan ardhur data string nga backend nuk iken -->
+  @if (isFetching() && !error()) { 
     <p class="fallback-text">Fetching available places...</p>
   }
 
+  <!-- shfaqet vetem kur ka error -->
   @if (error()) {
     <p class="fallback-text">{{ error() }}</p>
   }
 
   @if (places()) {
+    <!-- me ndimen e sinjalit dergojme vlerat ne app-places [places]="places()!" te cilat, 
+        i bashkagjiten inputit places = input.required<Place[]>(); -->
+       
+    <!-- vem re qe kemi nje '!' [places]="places()!" -> kjo do te thote qe array nuk do te jet null ose undefind -->  
+     
+    <!-- nderko marim vlera me output nga selectPlace = output<Place>(); ne (selectPlace)="onSelectPlace($event)" -->
+
     <app-places [places]="places()!" (selectPlace)="onSelectPlace($event)" />
+    
   } @else if (places()?.length === 0) {
     <p class="fallback-text">Unfortunately, no places could be found.</p>
-  }
+  } 
+  
 </app-places-container>
+   

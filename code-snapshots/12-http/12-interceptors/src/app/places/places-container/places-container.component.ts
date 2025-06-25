@@ -8,5 +8,7 @@ import { Component, input } from '@angular/core';
   styleUrl: './places-container.component.css'
 })
 export class PlacesContainerComponent {
+   // marim inputin statik nga <app-places-container title="Available Places"> DHE 
+   // <app-places-container title="Your Favorite Places">
   title = input.required<string>();
 }

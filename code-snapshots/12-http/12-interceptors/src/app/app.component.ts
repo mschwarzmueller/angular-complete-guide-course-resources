@@ -15,5 +15,8 @@ import { ErrorModalComponent } from './shared/modal/error-modal/error-modal.comp
 export class AppComponent {
   private errorService = inject(ErrorService);
 
-  error = this.errorService.error;
+  // take value string by: error = this._error.asReadonly(); 
+  error = this.errorService.error; 
 }
+ 
+
