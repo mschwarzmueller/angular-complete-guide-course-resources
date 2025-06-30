@@ -60,5 +60,6 @@ export class TasksService {
 
   private saveTasks() {
     localStorage.setItem('tasks', JSON.stringify(this.tasks));
+    if (this.tasks.length == 0) localStorage.removeItem('tasks');
   }
 }

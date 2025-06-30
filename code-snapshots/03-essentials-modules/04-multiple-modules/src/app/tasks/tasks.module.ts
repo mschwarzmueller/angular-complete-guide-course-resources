@@ -7,9 +7,18 @@ import { TaskComponent } from './task/task.component';
 import { NewTaskComponent } from './new-task/new-task.component';
 import { SharedModule } from '../shared/shared.module';
 
+// Bej export TaskComponet sepse TaskModule e kemi te inportuar ne AppModule ku app-tasks e perdorim ne app.component.html
 @NgModule({
-  declarations: [TasksComponent, TaskComponent, NewTaskComponent],
-  exports: [TasksComponent],
-  imports: [CommonModule, FormsModule, SharedModule]
+  declarations: [
+    TasksComponent, 
+    TaskComponent, 
+    NewTaskComponent
+  ],
+   exports: [ TasksComponent ],
+  imports: [
+    CommonModule, // @angular/common perfaqeson DatePipe, e gjeni ne dokumentacjonin Reference/API Reference/common
+    FormsModule, // @angular/forms' perfaqeson [(ngModel)], e gjeni ne dokumentacjonin Reference/API Reference/froms/NgModel 
+    SharedModule
+  ] 
 })
-export class TasksModule {}
+export class TasksModule {}  
