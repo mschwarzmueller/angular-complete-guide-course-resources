@@ -1,6 +1,16 @@
+<!-- per cdo link qe shtypim ne <a/> e drejtojme <router-outlet />  ne komponentin TasksComponent -->
 <div>
-  <a [routerLink]="['/users', user().id, 'tasks']" routerLinkActive="selected">
+  <!-- routerLink na mundeson te lundojme ne faqet e users.routes.ts  -->
+  <!-- routerLinkActive eshte nje feature e routes e cila na mundeson funksjone nga css sa here 
+   qe shtypim nje link routerLinkActive e diferencon ate nga links e tjeter duke i then nje gjyre
+   me te forte, edhe nese klikojme jashte vargut te linkutn ose i bejme refresh paga, gjyra e 
+   linkut qe klikuam nuk ndryshon. Kete modifikim mund ta bejme edhe ne css, por na i mundeson 
+   features of routers -->
+  <a [routerLink]="['/users', user().id, 'tasks']"  routerLinkActive="selected">
+
     <img [src]="imagePath()" [alt]="user().name" />
+    
     <span>{{ user().name }}</span>
   </a>
 </div>
+     

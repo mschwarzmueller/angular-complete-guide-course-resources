@@ -1,8 +1,13 @@
+
+<!-- sinjali input: order = input<'asc' | 'desc' | undefined>(); vler fillestare ka undefined, duke
+ qe undefined, funksjoni if - else nuk e lexon kushtin === me 'asc', duke mos e lexuar ai shfaq 
+ 'asc' and 'Ascending', kur e shtypim, input mer vleren 'asc' dhe funksjoni behet 'desc' ose 'Descending' -->
 <p>
   <a routerLink="./" [queryParams]="{order: order() === 'asc' ? 'desc' : 'asc'}">
-    Sort {{ order() === 'asc' ? 'Descending' : 'Ascending' }}
+    Sort {{ order() === 'asc' ? 'Descending' : 'Ascending' }} - {{order()}}
   </a>
 </p>
+
 
 <ul>
   @for (task of userTasks(); track task.id) {
@@ -13,3 +18,6 @@
     <p>There are no tasks yet. Start adding some!</p>
   }
 </ul>
+
+
+    
