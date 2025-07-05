@@ -8,7 +8,10 @@ import { InvestmentService } from '../investment.service';
   styleUrl: './investment-results.component.css',
 })
 export class InvestmentResultsComponent {
-  private investmentService = inject(InvestmentService);
 
-  results = computed(() => this.investmentService.resultData());
+  private investmentService = inject(InvestmentService); // therasim servisin me inject 
+
+  // Computed signal are read-only signals that derive their value from other signals. pra na mundeson te marim vlerat nga resultData_signal
+  results = computed(() => this.investmentService.resultData()); 
 }
+  
