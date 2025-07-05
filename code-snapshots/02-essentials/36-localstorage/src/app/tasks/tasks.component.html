@@ -1,21 +1,42 @@
-@if (isAddingTask) {
+
+<!-- if true return app-new-task qe permban nje dialog me form-data -->
+@if (isAddingTask) { <!-- dergojme user_id me @Input, marim thirjen close me @Output duke mbyllur dialogun -->
   <app-new-task [userId]="userId" (close)="onCloseAddTask()" />
 }
+
+<!-- *** po ta ven re si @if si @for jan jashte keyword te html, kurse for() te angular 17 eshte breda keyword <ul for( task of selectedUserTasks ) /> *** -->
 
 <section id="tasks">
   <header>
     <h2>{{ name }}'s Tasks</h2>
     <menu>
+      <!-- kur shtypim Add task shfaqet dialog i cili ndodhen ne app-new-task -->
       <button (click)="onStartAddTask()">Add Task</button>
+      
     </menu>
   </header>
 
+  
+  
+
   <ul>
+    <!-- pra track - gjurmoje eshte nje keyword or feature e cila i jep akses Angularit te rendis task si pas radhes se reshtave,
+         ku cdo reshte perfaqeson nje id, prandaj shtojme task.id sepse perfaqeson id cdo reshti, i cili permban nje objekt.   -->
+
+    <!-- Angular 18 introduces a new syntax for iteration using @for instead of *ngFor. This change aligns with a more modern and 
+         explicit approach to loops in templates.  -->   
+         
+     <!-- Tracking by ID: The track keyword is used to specify how Angular should track items for performance optimization, similar 
+          to trackBy in *ngFor. -->    
     @for (task of selectedUserTasks; track task.id) {
       <li>
         <app-task [task]="task" />
       </li>
     }
+
+    <!-- If you're upgrading to Angular 18, you'll need to update your templates to use this new syntax wherever you previously used *ngFor -->
+     
   </ul>
 </section>
 
+ 

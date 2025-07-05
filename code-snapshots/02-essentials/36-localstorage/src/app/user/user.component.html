@@ -1,6 +1,12 @@
+
+<!-- po te shofim me vemendje brenda <app-card> .... </app-card> kemi bashkagjitur disa sintaksa html -->
+<!-- ku ne komponentin child, ne app-card shtojme <ng-content /> i cili i jep akses sitaksave brenda app-card ne komponentin prind  -->
+
 <app-card>
+  <!-- if sekected == true, the cade call class active ' [class.active] ' inside html, otherwise false, not call anything  -->
   <button [class.active]="selected" (click)="onSelectUser()">
     <img [src]="imagePath" [alt]="user.name" />
     <span>{{ user.name }}</span>
   </button>
 </app-card>
+  

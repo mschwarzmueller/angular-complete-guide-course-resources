@@ -14,9 +14,12 @@ import { TasksService } from '../tasks.service';
 })
 export class TaskComponent {
   @Input({required: true}) task!: Task;
+
+  // " inject method " eshte ne vend te -> constructor(private tasksService: TasksService) {}
   private tasksService = inject(TasksService);
 
   onCompleteTask() {
     this.tasksService.removeTask(this.task.id);
   }
 }
+ 

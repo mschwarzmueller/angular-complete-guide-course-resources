@@ -12,12 +12,16 @@ import { TasksService } from './tasks.service';
   imports: [TaskComponent, NewTaskComponent],
 })
 export class TasksComponent {
-  @Input({ required: true }) userId!: string;
+  // marim vlerat userId dhe name nga app-root
+  // ketu marim userId i cili burron nga njera nga listat qe user ka shtypur
+  @Input({ required: true }) userId!: string; 
   @Input({ required: true }) name!: string;
   isAddingTask = false;
 
-  constructor(private tasksService: TasksService) {}
+  // private tasksService = inject(TasksService);
+  constructor(private tasksService: TasksService) {} // si inject si constructor funksjoni eshte i njejte
 
+  // marim ato objekte nga tasks_array te cilat filtrohen nga user_id, te cilat i bashkagjisim ne app-task
   get selectedUserTasks() {
     return this.tasksService.getUserTasks(this.userId);
   }
@@ -29,4 +33,4 @@ export class TasksComponent {
   onCloseAddTask() {
     this.isAddingTask = false;
   }
-}
+} 
