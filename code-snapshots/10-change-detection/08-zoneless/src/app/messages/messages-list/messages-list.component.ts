@@ -10,8 +10,9 @@ import { MessagesService } from '../messages.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MessagesListComponent {
-  private messagesService = inject(MessagesService);
-  messages = this.messagesService.allMessages;
+
+  private messagesService = inject(MessagesService); // marim servisin 
+  messages = this.messagesService.allMessages; // marim array string me vlera 
 
   get debugOutput() {
     console.log('[MessagesList] "debugOutput" binding re-evaluated.');

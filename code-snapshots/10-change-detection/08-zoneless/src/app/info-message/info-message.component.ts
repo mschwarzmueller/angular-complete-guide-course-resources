@@ -14,7 +14,7 @@ export class InfoMessageComponent {
     return 'InfoMessage Component Debug Output';
   }
 
-  onLog() {
+  onLog() { // pasi shtypim butonin angulari perqendrohet te komponentet prind - femij -> [AppComponent - Counter - InfoMessages]
     console.log('Clicked!');
   }
 }
