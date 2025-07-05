@@ -21,10 +21,10 @@ export class AppComponent {
 
   historicTemperatures = [
     25, 37, 19, -4, 28, 21, 19, 28, 33, 31, 9, 11, 5, -12, -5,
-  ];
+  ]; 
 
   constructor() {
-    this.historicTemperatures.sort((a, b) => a > b ? 1 : -1);
+    // this.historicTemperatures.sort((a, b) => a > b ? 1 : -1);
   }
 
   onReset(index: number) {
@@ -34,3 +34,4 @@ export class AppComponent {
     // this.historicTemperatures = newTemps;
   }
 }
+ 
