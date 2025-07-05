@@ -1,25 +1,33 @@
 <form (ngSubmit)="onSubmit()" #form>
+
   <app-control label="Title">
     <input
       name="title"
       id="title"
       #input
       [(ngModel)]="enteredTitle"
+
     />
   </app-control>
+
   <app-control label="Request">
     <textarea
       name="request"
-      id="request"
+      id="request" 
       rows="3"
-      #input
+      #textarea
       [(ngModel)]="enteredText"
     ></textarea>
   </app-control>
+  
+  <!-- <p> {{ textarea.value }} </p> -->
   <p>
-    <button appButton>
+
+    <button app-Button-in-new-ticket type="submit">
       Submit
-      <span ngProjectAs="icon">⌲</span>
+      <!-- ngProjectAs="icon" perfaqeson <ng-content select="icon" /> ne button.component.html e cila lecon klasen icon ne css. -->
+      <span ngProjectAs="icon">⌲</span> 
     </button>
   </p>
 </form>
+    
