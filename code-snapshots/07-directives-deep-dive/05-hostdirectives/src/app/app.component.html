@@ -1,17 +1,17 @@
 <main>
   <app-learning-resources />
-
   <hr />
-
   <app-auth />
 
   <!-- @if (isAdmin()) {
     <p>Only admins should see this!</p>
   } -->
   <!-- <p *ngIf="isAdmin()">Only admins should see this!</p> -->
-  <!-- <ng-template appAuth="admin">
+   <!-- ng-template perdoret per si nje feature ne html kur boolean eshte true ajo shfaq vlerat brenda saj, kurse eshte flase ajo nuk i shfaq  -->
+  <!-- <ng-template appAuth="admin"> 
     <p>Only admins should see this!</p>
   </ng-template> -->
+
   <p *appAuth="'admin'" appLog class="protected-content admin">
     Only admins should see this!
   </p>
@@ -21,4 +21,6 @@
   <p *appAuth="'guest'" class="protected-content authenticated">
     Guest users should see this!
   </p>
+  
 </main>
+ 

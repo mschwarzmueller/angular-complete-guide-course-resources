@@ -11,7 +11,7 @@ export class LogDirective {
   private elementRef = inject(ElementRef);
 
   onLog() {
-    console.log('CLICKED');
-    console.log(this.elementRef.nativeElement);
+    console.log('CLICKED ->',this.elementRef.nativeElement);
   }
 }
+ 
