@@ -1,0 +1,63 @@
+<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <h2>Login</h2>
+  
+    <div class="control-row">
+      <div class="control no-margin">
+        <!-- id="email" -> This provides a unique identifier for the input element 
+             within the form.  -->
+
+        <!-- name="email" ->  This is the form control name. It allows Angular to track 
+             the value and status of the input, pra name vleren value brenda objekt form 
+             te ngForm -->
+
+        <!-- required -> This is an HTML validation attribute, ensuring the field must 
+             have a value before the form can be submitted. -->
+
+        <!-- email -> This is an Angular validator, ensuring the input value must follow 
+             a valid email format (e.g., example@domain.com). -->
+
+        <!-- #email="ngModel" ->  The #email creates a local reference for the current 
+             input field, allowing you to access its state (like valid, invalid, dirty, 
+             touched) in the template.  -->
+
+        <label for="email">Email</label>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          ngModel
+          required
+          email
+          #email="ngModel" 
+        />
+      </div>
+  
+      <div class="control no-margin">
+        <label for="password">Password</label>
+        <input
+          id="password"
+          type="password"
+          name="password"
+          ngModel 
+          required
+          minlength="6"
+          #password="ngModel"
+        />
+      </div>
+  
+      <!-- si e shte e mundur butoni pa type="submit" behet submit? -->
+      <!-- HTML ose DOM, duke qen se BUTONI eshte breanda FORM e mer te mirqen sikur BUTONI PERMBAN type="submit"  -->
+      <button >Login</button> 
+    </div>
+  
+      <!-- email.touched -> do te thot kur, ke shtypur input per te shkrujtur, nuk shkruan, por shtyp faqen e browser dhe invalid or error true -->
+      <!-- email.invalid nese nuk i permbahemi kushteve te input emaill si: 'required, email', so, invalid or error true  -->
+
+    @if (email.touched && email.dirty && email.invalid) { <!-- lidhim if nga #email="ngModel"  -->
+      <p class="control-error">Invalid email address entered.</p>
+    }
+  
+    @if (password.touched && password.dirty && password.invalid) {
+      <p class="control-error">Invalid password entered - must be at least 6 characters long.</p>
+    }
+  </form>

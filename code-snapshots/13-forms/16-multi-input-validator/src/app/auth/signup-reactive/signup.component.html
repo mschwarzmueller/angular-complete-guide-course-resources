@@ -15,7 +15,7 @@
         type="password"
         name="password"
         formControlName="password"
-      />
+      /> 
     </div>
 
     <div class="control">
@@ -100,6 +100,10 @@
 
   <hr />
 
+  <!-- Opsionet (<option>): Këto janë opsionet e ndryshme që përdoruesi mund të zgjedhë. 
+       Secili opsion përmban një value (vlerë) që përputhet me tipet e përcaktuara më parë 
+       në FormControl ('student', 'teacher', etj.). -->
+       
   <div class="control-row">
     <div class="control">
       <label for="role">What best describes your role?</label>
@@ -149,7 +153,7 @@
 
   @if (form.touched && form.invalid) {
     <p class="control-error">
-      Invalid form - please check your input data.
+      Invalid form - please check your input data. 
     </p>
   }
 </form>

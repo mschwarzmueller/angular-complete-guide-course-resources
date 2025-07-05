@@ -1,0 +1,65 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <h2>Login</h2>
+
+  <div class="control-row">
+    <div class="control no-margin">
+      <label for="email">Email</label>
+      <!-- 1. nuk e kuptoj pse ka perdoru [formControl]="form.controls.email" ketu brenda FormGroup,
+           sepse kjo perdoret jasht FormGroup sepse eshte nje kontroll i pavarur.  -->
+      <input id="email" type="email" [formControl]="form.controls.email" />
+    </div>
+
+    <div class="control no-margin">
+      <label for="password">Password</label>
+      <input id="password" type="password" formControlName="password" />
+    </div>
+
+    <button class="button">Login</button>
+  </div>
+ 
+  @if (emailIsInvalid) {
+    <p class="control-error">Please enter a valid email address.</p>
+  }
+
+  @if (passwordIsInvalid) {
+    <p class="control-error">Please enter a valid password (must be at least 6 characters long and contain a question mark).</p>
+  }
+</form>
+ 
+<!-- 2. export class EmailFormComponent {
+
+  // Krijimi i një FormControl jashtë FormGroup
+  emailControl = new FormControl('', {
+    validators: [Validators.required, Validators.email]
+  });
+
+  onSubmit() {
+    if (this.emailControl.valid) {
+      console.log('Email submitted:', this.emailControl.value);
+    } else {
+      console.log('Form is invalid.');
+    }
+  }
+} -->
+
+<!-- 3. <form (ngSubmit)="onSubmit()">
+  <h2>Enter your email</h2>
+
+  <div class="control-row">
+    <div class="control">
+      <label for="email">Email</label>
+      <input id="email" type="email" [formControl]="emailControl" />
+    </div>
+
+    <div *ngIf="emailControl.invalid && emailControl.touched">
+      <span *ngIf="emailControl.errors?.required">Email is required.</span>
+      <span *ngIf="emailControl.errors?.email">Please enter a valid email address.</span>
+    </div>
+
+    <button type="submit" [disabled]="emailControl.invalid">Submit</button>
+  </div>
+</form> -->
+
+<!-- 4. pra nga shembulli kupton qe [formControl]="emailControl" perdoret vetem per kontrolle te vecanta. -->
+
+<!-- 5. kurse formControlName bën lidhjen mes një FormControl brenda një FormGroup ose FormArray -->

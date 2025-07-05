@@ -173,6 +173,9 @@ hr {
   color: #869999;
 }
 
+/* ng-invalid.ng-touched.ng-dirty -> te traja keto kalasat jan te krijuara under the hook of DOM, 
+by ngModel kur ne e specifikojme brenda input, duke modifikuar css e pergjithshme, nga e cila te 
+te marin sinjalin te gjith komponentet e angularit ne projekt. */
 [formgroupname].ng-invalid.ng-touched.ng-dirty label,
 .control:has(.ng-invalid.ng-touched.ng-dirty) label {
   color: #f98b75;
